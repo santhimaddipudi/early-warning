@@ -1,0 +1,13 @@
+command: ["streamlit", "run", "app.py"]
+
+env:
+  - name: GENIE_SPACE_ID
+    valueFrom: genie-space
+  - name: DATABRICKS_WAREHOUSE_ID
+    valueFrom: sql-warehouse
+  - name: DATABRICKS_TOKEN
+    valueFrom: app-token
+  - name: QUEUE_TABLE
+    value: workspace.attendance.intervention_queue
+  - name: STREAMLIT_SERVER_HEADLESS
+    value: "true"
